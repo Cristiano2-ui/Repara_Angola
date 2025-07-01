@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Material</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 20px;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      padding: 40px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-header h2 {
+      margin: 0;
+      font-size: 28px;
+      color: #1e293b;
+    }
+
+    .form-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #334155;
+    }
+
+    .form-group i {
+      position: absolute;
+      top: 38px;
+      left: 12px;
+      font-size: 18px;
+      color: #94a3b8;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 12px 12px 38px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      background-color: #f8fafc;
+      font-size: 15px;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #08673f;
+      background-color: #ffffff;
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-group input[type="file"] {
+      padding-left: 38px;
+    }
+
+    .submit-btn {
+      display: block;
+      margin: 0 auto;
+      padding: 14px 36px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #2b6354;
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #245c4c;
+    }
+
+    @media (max-width: 680px) {
+      .form-section {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-teal-800">
+
+  <form class="form-container">
+    <div class="form-header">
+      <h2>Cadastro de Material</h2>
+    </div>
+
+    <div class="form-section">
+      <div class="form-group">
+        <label for="tipo">Tipo de Material</label>
+        <i class="ri-box-3-line"></i>
+         <select id="estado" required>
+          <option value="">Selecione o tipo de material</option>
+          <option value="novo">Novo</option>
+          <option value="bom">Bom</option>
+          <option value="usado">Usado</option>
+          <option value="danificado">Danificado</option>
+            </select>
+      </div>
+
+      <div class="form-group">
+        <label for="estado"> Estado </label>
+        <i class="ri-shield-check-line"></i>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione...</option>
+          <option value="novo">Novo</option>
+          <option value="bom">Bom</option>
+          <option value="usado">Usado</option>
+          <option value="danificado">Danificado</option>
+        </select>
+      </div>
+
+      <div class="form-group full">
+        <label for="descricao">Descrição</label>
+        <i class="ri-file-text-line"></i>
+        <textarea id="descricao" name="descricao" placeholder="Descreva os detalhes do material..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="foto">Foto</label>
+        <i class="ri-image-line"></i>
+        <input type="file" id="foto" name="foto" accept="image/*">
+      </div>
+
+      <div class="form-group">
+        <label for="localizacao">Localização</label>
+        <i class="ri-map-pin-line"></i>
+        <input type="text" id="localizacao" name="localizacao" placeholder="Ex: Armazém A - Prateleira 2">
+      </div>
+
+      <div class="form-group">
+        <label for="quantidade">Quantidade</label>
+        <i class="ri-numbers-line"></i>
+        <input type="number" id="quantidade" name="quantidade" min="1" placeholder="Ex: 15" required>
+      </div>
+
+      <div class="form-group">
+        <label for="quantidade">Unidade</label>
+        <i class="ri-numbers-line"></i>
+        <select name="" id="">
+          <option value=""> casa </option>
+          <option value=""> casa </option>
+          <option value=""> casa </option>
+          <option value=""> casa </option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Salvar Material</button>
+  </form>
+
+</body>
+
+</html>

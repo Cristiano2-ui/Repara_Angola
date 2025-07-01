@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Esconde a listagem de diretórios
+Options -Indexes
+
+# Remove .php da URL (verifica se o arquivo existe)
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Redireciona tudo que não for arquivo nem pasta para index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

@@ -1,0 +1,267 @@
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(194, 194, 194);
+      height: 100vh;
+  }
+
+  .container_principal {
+      background: #e8e9eb;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .login_titulo {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .login_titulo h1 {
+      color: #2f3442;
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+  }
+
+  .login_titulo p {
+      color: #666666;
+      font-size: 1rem;
+  }
+
+  .form_elementos {
+      position: relative;
+      margin-bottom: 25px;
+  }
+
+  .form_elementos label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: 500;
+      font-size: 0.9rem;
+  }
+
+  .form_elementos input {
+      border: 2px solid #e1e5e9;
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+  }
+
+  .form_elementos input:focus {
+      outline: none;
+      border-color: #519E8A;
+      background: white;
+      transform: translateY(-2px);
+  }
+
+  .botao_login {
+      width: 100%;
+      padding: 12px;
+      background-color: #2b6354;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+  }
+
+  .botao_login:hover {
+      background-color: rgb(0, 115, 128);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(72, 72, 73, 0.3);
+  }
+
+  .botao_login:active {
+      transform: translateY(0);
+  }
+
+  .link_cadastro {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #e1e5e9;
+      color: #666;
+  }
+
+  .link_cadastro a {
+      text-decoration: none;
+      color: #519E8A;
+      transition: color 0.3s ease;
+  }
+
+  .link_cadastro a:hover {
+      text-decoration: underline;
+      color: rgb(0, 115, 128);
+  }
+
+
+  /* === criar conta === */
+  .container_principal2 {
+      display: none;
+      background: #e8e9eb;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .criar_titulo {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .criar_titulo h1 {
+      color: #333;
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+  }
+
+  .criar_titulo p {
+      color: #666;
+      font-size: 1rem;
+  }
+
+  .form-elemntos2 {
+      margin-bottom: 25px;
+  }
+
+  .senhas {
+      display: flex;
+      gap: 15px;
+  }
+
+  .senhas .form-elemntos2 {
+      flex: 1;
+  }
+
+  .form-elemntos2 label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-size: 0.9rem;
+  }
+
+  .form-elemntos2 input, .form-elemntos2 select  {
+      width: 100%;
+      padding: 15px 20px;
+      border: 2px solid #e1e5e9;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+  }
+
+  .form-elemntos2 input:focus {
+      outline: none;
+      border-color: #519E8A;
+      background: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(96, 98, 108, 0.2);
+  }
+
+  .botao_criar {
+      width: 100%;
+      padding: 12px;
+      background-color: #2b6354;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+  }
+
+  .botao_criar:hover {
+      background-color: rgb(0, 115, 128);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(72, 72, 73, 0.3);
+  }
+
+  .botao_criar:active {
+      transform: translateY(0);
+  }
+
+  .link_login {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid #e1e5e9;
+      color: #666;
+  }
+
+  .link_login a {
+      text-decoration: none;
+      color: #519E8A;
+      transition: color 0.3s ease;
+  }
+
+  .link_login a:hover {
+      text-decoration: underline;
+      color: rgb(0, 115, 128);
+  }
+
+  /* == trocar formulario == */
+  .trocar {
+      .container_principal {
+          display: none;
+      }
+
+      .container_principal {
+          display: none;
+      }
+
+      .container_principal2 {
+          display: block;
+      }
+  }
+
+
+
+  /* === responsividade === */
+  @media (max-width: 480px) {
+      .container_principal {
+          padding: 30px 20px;
+          margin: 10px;
+      }
+
+      .login_titulo h1 {
+          font-size: 2rem;
+      }
+  }
+
+  @media (max-width: 580px) {
+      .container_principal2 {
+          padding: 30px 20px;
+          margin: 10px;
+      }
+
+      .criar_titulo h1 {
+          font-size: 2rem;
+      }
+
+      .senhas {
+          flex-direction: column;
+          gap: 0;
+      }
+  }

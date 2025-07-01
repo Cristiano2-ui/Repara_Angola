@@ -1,0 +1,27 @@
+{
+    "name": "hp/projecto-recicla-facil",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cristiano",
+            "email": "cristianclassico770@gmail.com"
+        },
+                {
+            "name": "cefas",
+            "email": "devcefas@gmail.com"
+        },
+                {
+            "name": "Ibrahim",
+            "email": "ibrapaulo77@gmail.com"
+        },
+                {
+            "name": "vida",
+            "email": "devlite@gmail.com"
+        }
+    ],
+    "require": {}
+}

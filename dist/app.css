@@ -1,0 +1,24 @@
+/*npx @tailwindcss/cli -i ./dist/app.css -o ./public/css/style.css --watch*/
+@import "tailwindcss";
+
+
+.btn {
+
+
+    @apply flex items-center justify-center min-w-24 gap-2 p-2 rounded-md text-white;
+}
+
+.primary {
+
+
+    @apply bg-teal-600 text-white hover:bg-teal-800 cursor-pointer;
+}
+
+.secondary{
+    @apply bg-gray-800 text-white hover:bg-gray-500 cursor-pointer;
+
+}
+.danger {
+    @apply bg-rose-600 text-white hover:bg-rose-800 cursor-pointer;
+
+}
